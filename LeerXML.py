@@ -16,7 +16,6 @@ def LeerJugadoresXML(ruta):
 
     for element in root:
         
-
         if element.tag == "jugador":
             print("jugador encontrado")
             
@@ -55,19 +54,38 @@ def LeerJugadoresXML(ruta):
                             columna = sub2.attrib['c']
                             listaSolucion.agregarUltimo(Celda(fila, columna))        
 
-        jugadorNuevo = Jugador(nombre, edad, movimientos, size, figura, listaPuzzle, listaSolucion)
-        ImprimirInfo(jugadorNuevo)
-        listaJugadores.agregarUltimo(jugadorNuevo)
+            jugadorNuevo = Jugador(nombre, edad, movimientos, size, figura, listaPuzzle, listaSolucion)
+            ImprimirInfo(jugadorNuevo)
+            listaJugadores.agregarUltimo(jugadorNuevo)
+
+    return listaJugadores
+
+def LeerPremiosXML1(ruta):
+    pilaRegalos= ListaSimple()
+
+    doc = minidom.parse(ruta)
+    regalos = doc.getElementsByTagName("regalo")
+
+
+    for regalo in regalos:        
+        print(regalo.firstChild.data)
+        pilaRegalos.agregarPrimero(regalo.firstChild.data)
+
+    temp=pilaRegalos.primero
+    while temp!=None:
+        print("Premio: ",temp.dato)
+        temp=temp.next
+
+    return pilaRegalos
 
 def AbrirXML():
     tree = ET.parse('Entrada.xml')
     root = tree.getroot()
 
-
     for element in root:
         print(element.tag)
 
-LeerJugadoresXML('Entrada.xml')
+#LeerJugadoresXML('Entrada.xml')
 #AbrirXML()
 
-pruebaLista = ListaSimple()
+#LeerPremiosXML1("Premios.xml")

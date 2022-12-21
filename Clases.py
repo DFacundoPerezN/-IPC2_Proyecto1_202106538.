@@ -34,8 +34,6 @@ def conteoPuntos(dimension,movimientos,figura):
 
     return puntos
 
-print(conteoPuntos(1,100,"arbol"))
-
 class Jugador:
 
     def __init__(self,nombre,edad,moves, size, figura, puzzle, solucion):
@@ -47,12 +45,13 @@ class Jugador:
             self.figura=figura
             self.puzzle= puzzle     #podria ser una lista con las celdas marcadas
             self.solucion = solucion    #tambien podria ser una lista conlas celdas
-            self.puntos= conteoPuntos(size,moves,figura)
+            self.puntos=conteoPuntos(size,moves,figura)
 
         elif(verificarMatriz(size)):
             print("El numero de movimientos no  debe ser mayor a 10000")
         else:
             print("Tamaño de matriz no valido, debe ser multiplo de 5 y maximo de 30 x 30")
+
 
 def ImprimirInfo(jugador):
     try:
@@ -60,3 +59,6 @@ def ImprimirInfo(jugador):
         print("Nombre: ", jugador.nombre, ", Edad: ", jugador.edad, ", Movimientos realizados: ", jugador.movimientos, ", Tamaño del puzzle: ", jugador.size, ", Figura: ", jugador.figura)
     except:
         print("Error en la informacion del jugador")
+
+'''mar=Jugador("Mariano",13,5000,25,"arbol", 24,24)
+print((mar.puntos))'''
