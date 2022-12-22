@@ -5,6 +5,7 @@ from ListaSimple import *
 from ClaseCelda import Celda
 from Clases import Jugador
 from Clases import ImprimirInfo
+from Graficaciones import *
 
 def LeerJugadoresXML(ruta):
     print("leyendo archivo en ruta: ", ruta)
@@ -12,7 +13,7 @@ def LeerJugadoresXML(ruta):
     tree = ET.parse(ruta)
     root = tree.getroot()  
 
-    listaJugadores = ListaSimple()
+    listaJugadores = ListaJugadores()
 
     for element in root:
         
@@ -58,6 +59,9 @@ def LeerJugadoresXML(ruta):
             ImprimirInfo(jugadorNuevo)
             listaJugadores.agregarUltimo(jugadorNuevo)
 
+            graficarPuzzleySolucion(jugadorNuevo)
+
+    crearGraficaJugadores(listaJugadores)
     return listaJugadores
 
 def LeerPremiosXML1(ruta):
@@ -76,6 +80,7 @@ def LeerPremiosXML1(ruta):
         print("Premio: ",temp.dato)
         temp=temp.next
 
+    crearGraficaPremios(pilaRegalos)
     return pilaRegalos
 
 def AbrirXML():
@@ -85,7 +90,7 @@ def AbrirXML():
     for element in root:
         print(element.tag)
 
-#LeerJugadoresXML('Entrada.xml')
+#LeerJugadoresXML('j1.xml')
 #AbrirXML()
 
 #LeerPremiosXML1("Premios.xml")
