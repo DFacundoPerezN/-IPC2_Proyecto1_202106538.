@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jugadores>
+    <jugador>
+        <datospersonales>
+            <nombre>$nombre</nombre>
+            <edad>$edad</edad>
+        </datospersonales>
+        <movimientos>36</movimientos>
+        <tamaño>20</tamaño>
+        <figura>arbol</figura>
+        <puzzle>
+            <celda f="1" c="0"/>
+            <celda f="1" c="4" />
+            <celda f="1" c="3" />
+            <celda f="2" c="3" />
+            <celda f="3" c="4" />
+            <celda f="4" c="1" />
+            <celda f="4" c="2" />
+            <celda f="4" c="3" />
+            <celda f="4" c="4" />
+            <celda f="0" c="2" />
+        </puzzle>
+        <solucion>
+            <celda f="1" c="2" />
+            <celda f="2" c="1" />
+            <celda f="2" c="2" />
+            <celda f="2" c="3" />
+            <celda f="3" c="0" />
+            <celda f="3" c="1" />
+            <celda f="3" c="2" />
+            <celda f="3" c="3" />
+            <celda f="3" c="4" />
+            <celda f="4" c="2" />
+        </solucion>
+    </jugador >
+    <jugador>
+        <datospersonales>
+            <nombre>Salva</nombre>
+            <edad>16</edad>
+        </datospersonales>
+        <movimientos>36</movimientos>
+        <tamaño>20</tamaño>
+        <figura>arbol</figura>
+        <puzzle>
+            <celda f="1" c="0"/>
+            <celda f="1" c="4" />
+            <celda f="1" c="3" />
+            <celda f="2" c="3" />
+            <celda f="3" c="4" />
+            <celda f="4" c="1" />
+            <celda f="4" c="2" />
+            <celda f="4" c="3" />
+            <celda f="4" c="4" />
+            <celda f="0" c="2" />
+        </puzzle>
+        <solucion>
+            <celda f="1" c="2" />
+            <celda f="2" c="1" />
+            <celda f="2" c="2" />
+            <celda f="2" c="3" />
+            <celda f="3" c="0" />
+            <celda f="3" c="1" />
+            <celda f="3" c="2" />
+            <celda f="3" c="3" />
+            <celda f="3" c="4" />
+            <celda f="4" c="2" />
+        </solucion>
+    </jugador >
+</jugadores>
